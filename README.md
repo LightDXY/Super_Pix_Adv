@@ -15,7 +15,10 @@ Super-Pixel Generation
 	python -u get_slic.py
 
 K: number of super pixels
+
 M: compactness factor
+
+We resize the image to 299x299 as pre-process and 400 images example can be found at [here](https://github.com/LightDXY/Super_Pix_Adv/releases/download/v1.0.0/example.zip)
 
 Adversarial Attack
 ------------------

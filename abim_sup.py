@@ -19,17 +19,17 @@ from slic_loader import McDataset
 
 def main():
     netT = inception_v3.inception_v3(pretrained=False)
-    netT.load_state_dict(torch.load('/mnt/blob/ex_git/sup_pxiel/PRETRAIN/inception_v3_google-1a9a5a14.pth'))
+    netT.load_state_dict(torch.load('./PRETRAIN/inception_v3_google-1a9a5a14.pth'))
     netT.eval()
     netT.cuda()
     
     mean_arr = (0.5,0.5,0.5)
     stddev_arr = (0.5,0.5,0.5)
     
-    slic_dir = '/mnt/blob/ex_git/sup_pxiel/DATASET/slic/4000_20'
+    slic_dir = './DATASET/slic'
     print (slic_dir)
     test_dataset = McDataset(
-        '/mnt/blob/testset/resize_val',
+        './DATASET/img',
         slic_dir,
         transform=transforms.Compose([
             transforms.ToTensor(),
